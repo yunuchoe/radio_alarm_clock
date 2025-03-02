@@ -37,7 +37,7 @@ radio_frequency = 107.3
 radio_volume = 0
 mute_status = True
 
-#From ECE 299 Lab 3 (class Radio)         
+# radio Class       
 class Radio:
     
     def __init__( self, NewFrequency, NewVolume, NewMute ):
@@ -184,9 +184,9 @@ class Radio:
         
         return( MuteStatus, VolumeStatus, FrequencyStatus, StereoStatus )
 
-# Our variables
+# Custom variables
 hour = 11
-minute = 22 # 
+minute = 22 
 second = 50
 period = 'AM'  # set to 'AM' or 'PM'
 
@@ -230,7 +230,6 @@ button_3_pressed = False
 button_4_pressed = False
 
 # Common functions
-
 def change_format(): # changes hours if format is changed
     global format
     global period
@@ -256,7 +255,7 @@ def increment_function(): # how our increment function works
     global increment
     global increment_pointer
     increment_pointer+=1
-    increment = incremenet_list[increment_pointer % 5]
+    increment = incremenet_list[increment_pointer % 5] # % 5 for rolling counter
             
 
 def button_1_handler(pin): # functions of button 1
